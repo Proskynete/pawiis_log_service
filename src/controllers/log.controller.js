@@ -6,9 +6,9 @@ const get = async (req, res) => {
 		const logs = await Log.findOne({ pet_id });
 
 		if (!logs) {
-			return res.status(404).json({
-				status: 404,
+			return res.json({
 				message: `Pet's log not found`,
+				logs: [],
 			});
 		}
 
