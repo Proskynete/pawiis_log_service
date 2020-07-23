@@ -32,7 +32,7 @@ const create = async (req, res) => {
 const get = async (req, res) => {
 	const { pet_id } = req.query;
 	try {
-		const logs = await Log.findOne({ pet_id });
+		const logs = await Log.find({ pet_id });
 
 		if (!logs) {
 			return res.json({
