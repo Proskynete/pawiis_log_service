@@ -1,7 +1,7 @@
 const Log = require('../models/log.model');
 
 const get = async (req, res) => {
-	const { pet_id } = req.params;
+	const { pet_id } = req.query;
 	try {
 		const logs = await Log.findOne({ pet_id });
 
